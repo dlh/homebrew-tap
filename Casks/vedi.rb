@@ -2,20 +2,20 @@
 cask "vedi" do
   artifact "themes", target: "#{HOMEBREW_PREFIX}/share/vedi/themes"
 
-  version "2.10.1"
+  version "2.10.2"
 
   on_macos do
     depends_on arch: :arm64
-    sha256 "5c4e4cae6788ef2cb5b4136aca5f85129d92ba7b8843f12bb8679ac6ceaf8b55"
+    sha256 "bfd5f6e73523df59597328f32ea20f03b553b7377464cc077e7f197995522ca8"
     url "https://github.com/dlh/vedi/releases/download/v#{version}/vedi_#{version}_darwin_arm64.tar.gz"
   end
   on_linux do
     on_arm do
-      sha256 "80beab1885478c6db1e17d9c593170b7224168a08ad3e07e20b6ff18caef923e"
+      sha256 "e0f3b7ed5b049e84042c975f48f5df8f2dbc9cfd328aad0e7f83d4fba285ac1d"
       url "https://github.com/dlh/vedi/releases/download/v#{version}/vedi_#{version}_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "d0ea0a88525f73b0574ac92d074c9d6bde91cc7c437cd30762dbdc529345b50f"
+      sha256 "1f9ac1d4e4aaba32aa3118db68114f7ebffaf27663ea00c6cb65eb99814bb8a4"
       url "https://github.com/dlh/vedi/releases/download/v#{version}/vedi_#{version}_linux_amd64.tar.gz"
     end
   end
