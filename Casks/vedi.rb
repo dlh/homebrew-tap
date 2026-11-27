@@ -2,20 +2,20 @@
 cask "vedi" do
   artifact "themes", target: "#{HOMEBREW_PREFIX}/share/vedi/themes"
 
-  version "2.10.2"
+  version "2.11.0"
 
   on_macos do
     depends_on arch: :arm64
-    sha256 "bfd5f6e73523df59597328f32ea20f03b553b7377464cc077e7f197995522ca8"
+    sha256 "57f04ef3123b02681778c53b7b909415397ddcbae9a8094b201976cbaea152fb"
     url "https://github.com/dlh/vedi/releases/download/v#{version}/vedi_#{version}_darwin_arm64.tar.gz"
   end
   on_linux do
     on_arm do
-      sha256 "e0f3b7ed5b049e84042c975f48f5df8f2dbc9cfd328aad0e7f83d4fba285ac1d"
+      sha256 "9c66a8a6e7706e2d25ec9359f8f073d504e9be67f189ef826a19625f57c27e14"
       url "https://github.com/dlh/vedi/releases/download/v#{version}/vedi_#{version}_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "1f9ac1d4e4aaba32aa3118db68114f7ebffaf27663ea00c6cb65eb99814bb8a4"
+      sha256 "4724eb025d0f43e2a110d64e060dd1b5f40eb2b0cd58ef2817953db71d51be56"
       url "https://github.com/dlh/vedi/releases/download/v#{version}/vedi_#{version}_linux_amd64.tar.gz"
     end
   end
@@ -34,5 +34,5 @@ cask "vedi" do
   zsh_completion "completions/_vedi"
   fish_completion "completions/vedi.fish"
 
-  # No zap stanza required
+  zap :not_required
 end
